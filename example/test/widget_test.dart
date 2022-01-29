@@ -13,7 +13,7 @@ import 'package:camera_deep_ar_example/main.dart';
 void main() {
   testWidgets('Verify Platform version', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+    await tester.pumpWidget(DeepArExample());
 
     // Verify that platform version is retrieved.
     expect(

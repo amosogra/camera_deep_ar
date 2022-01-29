@@ -12,15 +12,15 @@ import 'config.dart';
 //https://github.com/mtellect/CameraDeepAR.git
 
 void main() {
-  runApp(MyApp());
+  runApp(DeepArExample());
 }
 
-class MyApp extends StatefulWidget {
+class DeepArExample extends StatefulWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  _DeepArExampleState createState() => _DeepArExampleState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _DeepArExampleState extends State<DeepArExample> {
   // CameraDeepArControllerX cameraDeepArController;
   // Effects currentEffect = Effects.none;
   // Filters currentFilter = Filters.none;
