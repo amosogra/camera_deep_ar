@@ -59,6 +59,4 @@ flutter {
 }
 
 dependencies {
-    //api fileTree(dir: 'libs', include: ['*.aar'])
-    //api(name: 'deepar0', ext: 'aar')
 }

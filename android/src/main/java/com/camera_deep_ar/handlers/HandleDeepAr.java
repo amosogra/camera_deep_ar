@@ -348,6 +348,7 @@ public class HandleDeepAr {
     }
 
     public void onVideoRecordingFinished() {
+        MediaScannerConnection.scanFile(context, new String[]{videoFile.toString()}, null, null);
         Map<String, Object> argument = new HashMap<>();
         argument.put("path", videoFile.toString());
         pluginView.sendResponse("onVideoRecordingComplete", argument);
@@ -378,13 +379,7 @@ public class HandleDeepAr {
     public void setImageFrame(Image image) {
         handler.post(() -> {
            try{
-               Log.d("Frame", "Load Image from Assets Task, obj: ");
-//
-//               ByteBuffer buffer = image.getPlanes()[0].getBuffer();
-//               byte[] bytes = new byte[buffer.remaining()];
-//               buffer.get(bytes);
-//               Bitmap bitmap = BitmapFactory.decodeByteArray(bytes,0,bytes.length,null);
-               
+               Log.d("Frame", "Load Image from Assets Task, obj: ");             
                final Image.Plane[] planes = image.getPlanes();
                Log.d("Frame", "Load Image from Assets Task, obj: " + planes.length);
                final Buffer buffer = planes[0].getBuffer().rewind();
